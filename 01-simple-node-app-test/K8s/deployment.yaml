@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sample-node-web-api
+spec:
+  selector:
+    matchLabels:
+      app: sample-node-web-api
+  replicas: 1 # deployment runs 1 pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: sample-node-web-api
+    spec:
+      containers:
+      - name: sample-node-image
+        image: jagrandd/sample-node-image:latest
+        ports:
+        - containerPort: 9090 #Endpoint is at port 9090 in the container

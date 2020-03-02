@@ -1,0 +1,1 @@
+docker build -t jagrandd/sample-node-image .

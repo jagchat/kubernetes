@@ -1,0 +1,1 @@
+docker run -d -p 6060:9090 --name test-sample-node jagrandd/sample-node-image

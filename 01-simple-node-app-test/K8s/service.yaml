@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: sample-node-web-api-service
+spec:
+  type: NodePort #Exposes the service as a node port
+  ports:
+  - port: 6060
+    protocol: TCP
+    targetPort: 9090
+  selector:
+    app: sample-node-web-api
